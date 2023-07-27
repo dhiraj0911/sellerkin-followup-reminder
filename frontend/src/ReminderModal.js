@@ -9,6 +9,7 @@ const ReminderModal = ({ product, closeModal }) => {
   const handleSaveReminder = () => {
     axios
       .post('/api/reminders', { productId: product.id, reminderDate })
+      closeModal()
   };
 
   return (
