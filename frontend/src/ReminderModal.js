@@ -9,16 +9,8 @@ const ReminderModal = ({ product, closeModal }) => {
   const handleSaveReminder = () => {
     axios
       .post('/api/reminders', { productId: product.id, reminderDate })
-      .then((response) => {
+      .then((response) => 
           alert(response.data.message);
-          closeModal();
-      })
-      .catch((error) => {
-        // Handle network and other errors
-        console.error('Error saving reminder:', error);
-        alert('Failed to save reminder. Please try again.');
-        closeModal();
-      });
   };
 
   return (
