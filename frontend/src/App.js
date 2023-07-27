@@ -11,6 +11,7 @@ const App = () => {
       // Make sure to include the base URL for the backend API
       const response = await axios.get('https://follow-0h6m.onrender.com/api/products');
       setProducts(response.data);
+      console.log(products);
     } catch (error) {
       console.log('Error fetching products:', error);
     }
