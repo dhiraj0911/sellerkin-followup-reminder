@@ -10,15 +10,8 @@ const ReminderModal = ({ product, closeModal }) => {
     axios
       .post('/api/reminders', { productId: product.id, reminderDate })
       .then((response) => {
-        if (response.status === 201) {
           alert(response.data.message);
           closeModal();
-        } else {
-          // Handle unexpected response status codes
-          console.error('Unexpected response:', response);
-          alert('Failed to save reminder. Please try again.');
-          closeModal();
-        }
       })
       .catch((error) => {
         // Handle network and other errors
