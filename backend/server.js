@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors'); // Add the cors middleware
 const app = express();
 const port = 5000;
 const mongoose = require('mongoose');
@@ -6,6 +7,8 @@ const mongoose = require('mongoose');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Enable CORS for all routes
+app.use(cors());
 
 const dummyProducts = [
   { id: 1, title: 'Product 1', category: 'Electronics', keywordsVolume: 100, reminderDate: null },
