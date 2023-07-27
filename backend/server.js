@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 const dummyProducts = [
-  { id: 1, title: 'Product 1', category: 'Electronics', keywordsVolume: 100, reminderDate: null },
+  { id: 1, title: 'Product 1', category: 'Electronics', keywordsVolume: 100, reminderDate: "2023-08-01" },
   { id: 2, title: 'Product 2', category: 'Clothing', keywordsVolume: 200, reminderDate: null },
   { id: 3, title: 'Product 3', category: 'Home & Kitchen', keywordsVolume: 150, reminderDate: null },
   { id: 4, title: 'Product 4', category: 'Toys & Games', keywordsVolume: 180, reminderDate: null },
