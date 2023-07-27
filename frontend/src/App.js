@@ -8,7 +8,8 @@ const App = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('/api/products');
+      // Make sure to include the base URL for the backend API
+      const response = await axios.get('https://follow-0h6m.onrender.com/api/products');
       setProducts(response.data);
     } catch (error) {
       console.log('Error fetching products:', error);
